@@ -1,0 +1,9 @@
+[
+  {
+    "model": "website.setting",
+    "fields": {
+      "name": "Login Database Path",
+      "value": "/var/log/login-attempts.db"
+    }
+  }
+]
