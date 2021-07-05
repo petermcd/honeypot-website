@@ -5,5 +5,12 @@
       "name": "Login Database Path",
       "value": "/var/log/login-attempts.db"
     }
+  },
+  {
+    "model": "website.setting",
+    "fields": {
+      "name": "Last Fetched Index",
+      "value": "0"
+    }
   }
 ]

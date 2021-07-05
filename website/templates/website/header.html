@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Honeypot</title>
+    <meta charset="utf-8">
+    <title>Intra Site</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery.canvasjs.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<nav>
+    <form>
+        <label for="start-date">Start date</label><input id="start-date" name="start-date" type="date">
+        <label for="start-time">Start time</label><input id="start-time" name="start" type="time" value="00:00"><br />
+        <label for="end-date">End date</label><input id="end-date" name="end-date" type="date">
+        <label for="end-time">End date</label><input id="end-time" name="start" type="time" value="00:00"><br />
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option selected>All</option>
+            <option>China</option>
+        </select>
+        <label for="period">Period</label>
+        <select id="period" name="period">
+            <option selected>User defined</option>
+            <option>Past hour</option>
+            <option>Past day</option>
+            <option>Past week</option>
+            <option>Past month</option>
+            <option>Past year</option>
+        </select>
+    </form>
+</nav>
