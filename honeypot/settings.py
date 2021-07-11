@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,17 @@ WSGI_APPLICATION = 'honeypot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+DATABASE_PATH = '/var/log/'
+
+if DEBUG:
+    DATABASE_PATH = BASE_DIR
+
+DATABASE_NAME = 'login-attempts.db'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': DATABASE_PATH / DATABASE_NAME,
     }
 }
 

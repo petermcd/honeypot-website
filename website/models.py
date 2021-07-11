@@ -20,3 +20,15 @@ class Setting(models.Model):
         :return: Str showing the setup of the object
         """
         return f'name={self.name}, value={self.value}'
+
+
+class Logins(models.Model):
+    id = models.AutoField(primary_key=True)
+    host = models.TextField(unique=True)
+    username = models.TextField(unique=True)
+    password = models.TextField(unique=True)
+    processed = models.IntegerField(default=0)
+    when = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "logins"
