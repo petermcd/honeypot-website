@@ -5,7 +5,11 @@ on the honeypot and will allow viewing live data.
 
 ## Install
 
+```bash
+python manage.py createsuperuser
 ```
+
+```bash
 # Load database
 python manage.py migrate
 python manage.py loaddata settings

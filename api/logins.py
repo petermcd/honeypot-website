@@ -1,4 +1,7 @@
+import time
+
 from django.http import HttpResponse
+
 from .output import Output
 
 

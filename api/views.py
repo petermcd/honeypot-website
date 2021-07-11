@@ -1,5 +1,5 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+
 from .logins import Logins
 from .output import Output
 

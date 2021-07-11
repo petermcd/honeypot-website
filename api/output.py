@@ -1,5 +1,5 @@
-from typing import Any, Dict, List
 from json import dumps
+from typing import Any, Dict, List
 
 
 class Output:
@@ -14,7 +14,11 @@ class Output:
         }
         return self._compile(res)
 
-    def success(self, data: List[Any], parameters: Dict[str, Any]) -> (Dict[str, Any], str):
+    def success(
+            self,
+            data: List[Any],
+            parameters: Dict[str, Any]
+    ) -> (Dict[str, Any], str):
         res = {
             'status': 1,
             'record_count': len(data),

@@ -24,9 +24,9 @@ class Setting(models.Model):
 
 class Logins(models.Model):
     id = models.AutoField(primary_key=True)
-    host = models.TextField(unique=True)
-    username = models.TextField(unique=True)
-    password = models.TextField(unique=True)
+    host = models.TextField(unique=True, default='')
+    username = models.TextField(unique=True, default='')
+    password = models.TextField(unique=True, default='')
     processed = models.IntegerField(default=0)
     when = models.DateTimeField(auto_now_add=True)
 

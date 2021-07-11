@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+admin.site.site_title = "My Honeypot Admin"
+admin.site.site_header = "Honeypot Administration"
+admin.site.index_title = "Honeypot Administration"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('website.urls')),
